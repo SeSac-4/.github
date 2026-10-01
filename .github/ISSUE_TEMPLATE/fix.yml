@@ -1,0 +1,43 @@
+name: fix
+description: 버그 제보 및 수정
+title: "[fix] "
+labels: ["fix"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: 영역
+      options:
+        - front
+        - back
+        - infra
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: 버그 설명
+      description: 어떤 문제가 발생했는지 적어주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 재현 방법
+      value: |
+        1. 
+        2. 
+        3. 
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 기대 동작
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 환경 / 로그 / 스크린샷
+      description: 에러 로그, 브라우저, OS 등 (선택)

@@ -1,0 +1,36 @@
+name: refactor
+description: 동작 변경 없이 코드 구조 개선
+title: "[refactor] "
+labels: ["refactor"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: 영역
+      options:
+        - front
+        - back
+        - infra
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: 리팩터링 이유
+      description: 현재 코드의 문제점을 적어주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: plan
+    attributes:
+      label: 개선 방향
+      value: |
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: 영향 범위
+      description: 변경으로 영향받는 모듈이나 기능 (선택)
